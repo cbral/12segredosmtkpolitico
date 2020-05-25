@@ -3551,6 +3551,15 @@ gulp-connect-php@^1.0.3:
     bin-version-check "^2.1.0"
     opn "^1.0.0"
 
+gulp-copy@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-copy/-/gulp-copy-4.0.1.tgz#12a233fed26bded60cd5ec0b99f65be83f3b16b2"
+  integrity sha512-UbdAwmEiVNNv55KAiUYWOP6Za7h8JPHNNyekNx8Gyc5XRlpUzTrlEclps939nOeiDPsd6jUtT2LmfavJirbZQg==
+  dependencies:
+    gulp "^4.0.0"
+    plugin-error "^0.1.2"
+    through2 "^2.0.3"
+
 gulp-csso@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/gulp-csso/-/gulp-csso-3.0.1.tgz#3c160364491e32f2ecefd5d531cf7724f1afb7f0"

@@ -23,10 +23,10 @@ const phpConnect = require('gulp-connect-php');
 const imageminPngquant = require('imagemin-pngquant');
 const server = browserSync.create();
 
-let origem = "";
+let origem = "./";
 let origemNode = './node_modules/';
 let destino = "12segredosmktpolitico/";
-let clean = () => del([`${destino}/css`, `${destino}/js`, `${destino}/images`]);
+let clean = () => del([`${destino}/*.php`, `${destino}/css`, `${destino}/js`, `${destino}/images`]);
 
 let paths = {
   styles: {
@@ -45,7 +45,7 @@ let paths = {
   images: {
     src: `${origem}images/**/*.{png,jpg,jpeg,gif,svg}`,
     srcsprite: origem + "images/sprites/**/*",
-    dest: `${destino}images/`
+    dest: `${destino}`
   },
 };
 
@@ -151,13 +151,22 @@ function imgmin() {
       svgoPlugins: [{ removeViewBox: false }],
       use: [imageminPngquant()]
     }))
-    .pipe(gulp.dest(`${destino}/images`))
+    .pipe(gulp.dest(`${destino}`))
     .pipe(browserSync.stream());
+}
+
+function php() {
+  return gulp.src(`php/**/*.php`).pipe(gulp.dest(`${destino}`));
 }
 
 function watch() {
   gulp.watch(`${paths.styles.src}**/*.scss`, { interval: 500 }, gulp.series(css));
   gulp.watch(`${paths.scripts.src}`, { interval: 500 }, gulp.series(javascript, reload));
+  // gulp.watch(`${origem}/php/*.php`, gulp.series(php, reload));
+  gulp.watch(`${origem}/php/*.php`).on('change', function () {
+    php();
+    reload();
+  });
   gulp.watch('images/*.{png,jpg,jpeg,gif,svg}', { cwd: './' }['imgmin']);
 }
 
@@ -184,6 +193,7 @@ function reload(done) {
   server.reload();
   done();
 }
-const dev = gulp.parallel([clean, connectsync, css, javascript, imgmin]);
+// const dev = gulp.parallel([php]);
+const dev = gulp.parallel([clean, php, connectsync, css, javascript, imgmin]);
 
 exports.default = dev;
