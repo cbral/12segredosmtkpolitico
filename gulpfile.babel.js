@@ -68,33 +68,6 @@ let paths = {
 //   return merge(imgStream, cssStream);
 // }
 
-// function bs(done) {
-//   server.init([paths.html.src], {
-//     watchTask: true,
-//     reloadOnRestart: true,
-//     server: {
-//       baseDir: destino
-//     }
-//   });
-//   done();
-//   gulp.watch(`${paths.styles.src}**/*.scss`, css);
-//   gulp.watch(paths.scripts.src, gulp.series(javascript, reload));
-//   // gulp.watch(paths.html.src).on('change', copy);
-// }
-
-// const dev = gulp.series(
-//   clean,
-//   // copy,
-//   // copyPHP,
-//   css,
-//   javascript,
-//   connectsync,
-//   watch,
-//   // imgmin,
-//   // sprite,
-//   // bs, 
-// );
-
 function css() {
   return gulp
     .src(`${paths.styles.src}**/*.scss`)
@@ -156,29 +129,27 @@ function imgmin() {
 }
 
 function php() {
-  return gulp.src(`php/**/*.php`).pipe(gulp.dest(`${destino}`));
+  return gulp.src(`${origem}php/**/*.php`).pipe(gulp.dest(`${destino}`));
 }
 
 function watch() {
   gulp.watch(`${paths.styles.src}**/*.scss`, { interval: 500 }, gulp.series(css));
   gulp.watch(`${paths.scripts.src}`, { interval: 500 }, gulp.series(javascript, reload));
-  // gulp.watch(`${origem}/php/*.php`, gulp.series(php, reload));
-  gulp.watch(`${origem}/php/*.php`).on('change', function () {
-    php();
-    reload();
-  });
+  gulp.watch(`${origem}php/**/*.php`, gulp.series(php, reload));
   gulp.watch('images/*.{png,jpg,jpeg,gif,svg}', { cwd: './' }['imgmin']);
 }
 
 function connectsync(done) {
   phpConnect.server({
-    watchTask: true,
-    reloadOnRestart: true,
-    keepalive: true,
-    base: "/"
+    base: "/12segredosmktpolitico"
   }, function () {
     browserSync({
-      proxy: '12segredosmktpolitico.local',
+      files: `${origem}php/**/*.php`,
+      watchTask: true,
+      reloadOnRestart: true,
+      keepalive: true,
+      injectChanges: true,
+      proxy: 'http://12segredosmktpolitico.local',
       watchOptions: {
         debounceDelay: 1000
       }
@@ -193,7 +164,7 @@ function reload(done) {
   server.reload();
   done();
 }
-// const dev = gulp.parallel([php]);
+
 const dev = gulp.parallel([clean, php, connectsync, css, javascript, imgmin]);
 
 exports.default = dev;
