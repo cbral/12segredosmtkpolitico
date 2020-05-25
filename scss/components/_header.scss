@@ -1,0 +1,15 @@
+.header-main {
+  background-color: $cor-pri-2;
+  .logo {
+    img {
+      height: 40px;
+      width: inherit;
+    }
+  }
+  .social-media {
+    font-size: 1rem;
+    span {
+      width: 1em;
+    }
+  }
+}

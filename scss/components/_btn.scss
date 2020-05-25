@@ -1,0 +1,37 @@
+.btn__default {
+  min-width: 130px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 22px;
+  margin: 2em 0;
+  padding: .5em;
+  text-transform: uppercase;
+  background: $cor-comp-1;
+  box-shadow: 0 0 0 rgba($preto, 0.25), inset 2px 3px 4px rgba($preto, 0.25);
+  border-radius: 6px;
+  transition: all .2s ease-in-out;  
+  text-decoration: none;
+  color: darken($cor-pri, 25%);
+
+  &:hover {
+    background: lighten($cor-sec-4, 30%);
+    box-shadow: 3px 4px 5px rgba($preto, 0.25), inset 3px 4px 5px rgba($preto, 0.25);
+
+  }
+
+  &:active {
+    box-shadow: 3px 4px 5px rgba($preto, 1),
+      inset 3px 4px 5px rgba($preto, 0.25);
+  }
+
+  a {
+    padding: 0.7625em;
+    color: $cor-pri-4;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+}

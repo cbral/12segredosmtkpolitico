@@ -1,0 +1,77 @@
+.form-default {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  @media(min-width: 767px) {
+    letter-spacing: -0.04em;  
+  }
+
+  label {
+    color: $preto;
+    font-size: .6em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media(min-width: 767px) {
+      font-size: .75em;
+    }
+  }
+
+  input {
+    font-family: 'Times New Roman', Times, serif;
+    color: $branco;
+    font-size: 0.75rem !important;
+    border: 2px solid $cor-pri-2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &::placeholder {
+    color: red;
+    font-size: 0.75rem;
+  }
+
+  button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 5px 5px 0px;
+    color: $cor-pri-2;
+    font-style: italic;
+    font-weight: 600;
+    border: 2px solid $cor-pri-2;
+    border-left: none;
+
+    &:hover {
+      background: $cor-pri-2;
+      border: 2px solid $cor-pri-2;
+      color: $cor-sec-2;
+      border-left: none;
+    }
+
+    &.btn-happy {
+      &::after {
+        content: '';
+        display: inline-block;
+        background: url(../img/icons/icon-smile-roxo.svg) no-repeat;
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-left: .5rem;
+      }
+
+      &:hover {
+        &::after {
+          background: url(../img/icons/icon-smile.svg) no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  .info-form {
+    font-weight: 600;
+    color: $preto;
+    font-size: .75rem;
+    font-style: italic;
+  }
+}

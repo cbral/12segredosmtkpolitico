@@ -1,0 +1,1 @@
+alert('teste de js, agora com watch');

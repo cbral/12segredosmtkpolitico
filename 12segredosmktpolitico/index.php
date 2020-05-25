@@ -1,4 +1,3 @@
 <?php get_header(); ?>
-
-<h1>Segredos do Marketing Politico</h1>
+<h1><?php bloginfo('name'); ?></h1>
 <?php get_footer(); ?>
