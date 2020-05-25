@@ -40,8 +40,7 @@
     "vinyl-buffer": "^1.0.1"
   },
   "dependencies": {
-    "animate.css": "^3.7.2",
-    "animation.css": "^0.1.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "gulp-connect-php": "^1.0.3",
     "gulp-copy": "^4.0.1",
