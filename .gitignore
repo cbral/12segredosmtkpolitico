@@ -61,4 +61,6 @@ typings/
 .next
 
 # pasta de produção do projeto
-/dist
+/12segredosmktpolitico/css
+/12segredosmktpolitico/js
+/12segredosmktpolitico/images
