@@ -1,9 +1,9 @@
 <!-- Modal -->
 <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tBacvJMUGKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="player-video-explicativo" type="text/html" width="100%" height="auto" src="https://www.youtube.com/embed/tBacvJMUGKs?enablejsapi=1" frameborder="0"></iframe>
       </div>
     </div>
   </div>

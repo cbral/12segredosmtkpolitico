@@ -46,7 +46,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="chamada-modal" data-toggle="modal" data-target="#modalVideo">
+        <div class="chamada-modal" data-toggle="modal" data-target="#modalVideo" data-aos="flip-up" data-aos-delay="200">
 
           <img src="<?php echo bloginfo('template_directory'); ?>/images/video.jpg" alt="" srcset="<?php echo bloginfo('template_directory'); ?>/images/video.jpg">
         </div>

@@ -1,26 +1,44 @@
+// API YouTube
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-video-explicativo', {
+    playerVars: {
+      modestbranding: 1, showinfo: 0, ecver: 2
+    },
+  });
+}
+
+// Carregamento funções do site
 $(document).ready(function () {
   AOS.init();
 
   // Add smooth scrolling to all links
   $("[data-scroll='smoth']").on('click', function (event) {
-
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
 
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function () {
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
+        scrollTop: $(hash).offset().top - 50
+      }, 300, function () {
         window.location.hash = hash;
       });
-    } // End if
+    }
+  });
+
+  $('#modalVideo').on('show.bs.modal', function (e) {
+    player.playVideo();
+  });
+
+  $('#modalVideo').on('hidden.bs.modal', function (e) {
+    player.stopVideo();
   });
 });

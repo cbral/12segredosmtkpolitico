@@ -6,20 +6,37 @@ html {
   scroll-behavior: smooth;
 }
 
+iframe {
+  min-height: 200px;
+  max-height: 300px;
+
+  @include tamanho-tela(celular) {
+    min-height: 300px;
+    max-height: 400px;
+
+  }
+
+  @include tamanho-tela(desktop) {
+    min-height: 500px;
+    max-height: 800px;
+
+  }
+}
+
 html,
 body {
   font-size: 100%;
-  
+
   @include tamanho-tela(celular) {
     font-size: 110%;
-    
+
   }
-  
+
   @include tamanho-tela(tablet) {
     font-size: 115%;
-    
+
   }
-  
+
   @include tamanho-tela(desktop) {
     font-size: 120%;
 
@@ -34,13 +51,15 @@ img {
   width: 76%;
   margin-top: 1em;
   margin-bottom: .5em;
-  
+
   @include tamanho-tela(celular) {
     margin-top: 3em;
   }
+
   @include tamanho-tela(tablet) {
     width: 63%;
   }
+
   @include tamanho-tela(desktop) {}
 
   .point {
@@ -48,15 +67,14 @@ img {
     border-radius: 50%;
     width: .8em;
     height: .8em;
-    
-    
-    @include tamanho-tela(celular) {
-    }
-    
+
+
+    @include tamanho-tela(celular) {}
+
     @include tamanho-tela(tablet) {
       width: 63%;
     }
-    
+
     @include tamanho-tela(desktop) {
       width: .5em;
       height: .5em;
@@ -92,7 +110,7 @@ hr.divisor {
       // font-size: 3.8281em;
 
     }
-    
+
     &:nth-child(2),
     &:nth-child(3) {
       color: $cor-sec;
@@ -120,11 +138,11 @@ h2.subtitulo-logo {
   width: 32px;
   height: 32px;
   animation: bounce 2s infinite;
-  
+
   @include tamanho-tela(celular) {}
-  
+
   @include tamanho-tela(tablet) {}
-  
+
   @include tamanho-tela(desktop) {
     width: 57px;
     height: 57px;
@@ -154,7 +172,8 @@ h2.subtitulo-logo {
 
 // Video explicativo
 .video-explicativo {
-  margin: 4em 0;
+  margin: 5em 0;
+
   .chamada-modal {
     cursor: pointer;
   }
