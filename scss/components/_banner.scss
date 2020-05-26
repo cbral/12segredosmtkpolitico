@@ -1,8 +1,32 @@
 #bannerTopo {
+  border-bottom: $cor-sec solid;
+  outline: $cor-sec solid .9rem;
+  background-color: $cor-pri;
+  height: 98vh;
+
+  @include tamanho-tela(tablet) {
+    outline: $cor-sec solid 1.125rem;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    height: inherit;
+  }
+
+  .carousel-item {
+    img.image-item {
+      object-fit: cover;
+      height: 100%;
+      height: -webkit-fill-available;
+
+      @include tamanho-tela(tablet) {}
+    }
+  }
+
   .carousel-caption {
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

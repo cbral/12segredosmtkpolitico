@@ -1,3 +1,161 @@
 * {
   transition: all .2s ease-in;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 100%;
+  
+  @include tamanho-tela(celular) {
+    font-size: 110%;
+    
+  }
+  
+  @include tamanho-tela(tablet) {
+    font-size: 115%;
+    
+  }
+  
+  @include tamanho-tela(desktop) {
+    font-size: 120%;
+
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.box-point {
+  width: 76%;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  
+  @include tamanho-tela(celular) {
+    margin-top: 3em;
+  }
+  @include tamanho-tela(tablet) {
+    width: 63%;
+  }
+  @include tamanho-tela(desktop) {}
+
+  .point {
+    background-color: $branco;
+    border-radius: 50%;
+    width: .8em;
+    height: .8em;
+    
+    
+    @include tamanho-tela(celular) {
+    }
+    
+    @include tamanho-tela(tablet) {
+      width: 63%;
+    }
+    
+    @include tamanho-tela(desktop) {
+      width: .5em;
+      height: .5em;
+    }
+  }
+
+}
+
+hr.divisor {
+  border: 5px solid $cor-sec;
+  border-radius: 50px;
+  margin: 10px 0;
+}
+
+.logo {
+  display: block;
+
+  h1 {
+    margin-bottom: 0;
+    font-family: Boomer;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 111.2%;
+    text-transform: uppercase;
+    text-align: left;
+
+    @include tamanho-tela(celular) {}
+
+    @include tamanho-tela(tablet) {}
+
+    @include tamanho-tela(desktop) {
+      // font-size: 3.8281em;
+
+    }
+    
+    &:nth-child(2),
+    &:nth-child(3) {
+      color: $cor-sec;
+    }
+  }
+
+}
+
+h2.subtitulo-logo {
+  font-family: Boomer;
+  font-size: 1.2em;
+  text-align: left;
+
+  @include tamanho-tela(celular) {}
+
+  @include tamanho-tela(tablet) {}
+
+  @include tamanho-tela(desktop) {
+    // font-size: 3.8281em;
+  }
+}
+
+.proxima-secao {
+  margin-top: 50px;
+  width: 32px;
+  height: 32px;
+  animation: bounce 2s infinite;
+  
+  @include tamanho-tela(celular) {}
+  
+  @include tamanho-tela(tablet) {}
+  
+  @include tamanho-tela(desktop) {
+    width: 57px;
+    height: 57px;
+    margin-top: 60px;
+    // font-size: 3.8281em;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-30px);
+    }
+
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+}
+
+// Video explicativo
+.video-explicativo {
+  margin: 4em 0;
+  .chamada-modal {
+    cursor: pointer;
+  }
+}
