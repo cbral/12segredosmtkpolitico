@@ -21,3 +21,18 @@ $cor-comp-2: #F3F1F1;
 
 $preto: #000;
 $branco: #FFF;
+
+// Fontes padrões
+@font-face {
+  font-family: 'Boomer';
+  src: url('../fonts/Boomer-ExtraBold.eot');
+  src: url('../fonts/Boomer-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Boomer-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Boomer-ExtraBold.woff') format('woff'),
+    url('../fonts/Boomer-ExtraBold.ttf') format('truetype'),
+    url('../fonts/Boomer-ExtraBold.svg#Boomer-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+$font-padrao: 'Boomer';

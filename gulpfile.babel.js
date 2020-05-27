@@ -26,7 +26,7 @@ const server = browserSync.create();
 let origem = "./";
 let origemNode = './node_modules/';
 let destino = "12segredosmktpolitico/";
-let clean = () => del([`${destino}/*.php`, `${destino}/css`, `${destino}/js`, `${destino}/images`]);
+let clean = () => del([`${destino}/*.php`, `${destino}/css`, `${destino}/js`, `${destino}/images`, `${destino}/fonts`]);
 
 let paths = {
   styles: {
@@ -47,6 +47,10 @@ let paths = {
     srcsprite: origem + "images/sprites/**/*",
     dest: `${destino}`
   },
+  fonts: {
+    src: `${origem}fonts/**/*`,
+    dest: `${destino}/fonts`
+  }
 };
 
 // function sprite() {
@@ -132,6 +136,11 @@ function php() {
   return gulp.src(`${origem}php/**/*.php`).pipe(gulp.dest(`${destino}`));
 }
 
+function fonts() {
+  return gulp.src(paths.fonts.src)
+    .pipe(gulp.dest(paths.fonts.dest))
+}
+
 function watch() {
   gulp.watch(`${paths.styles.src}**/*.scss`, { interval: 500 }, gulp.series(css));
   gulp.watch(`${paths.scripts.src}`, { interval: 500 }, gulp.series(javascript, reload));
@@ -165,6 +174,6 @@ function reload(done) {
   done();
 }
 
-const dev = gulp.parallel([clean, php, connectsync, css, javascript, imgmin]);
+const dev = gulp.parallel([clean, gulp.series(fonts, php, connectsync, css, javascript, imgmin)]);
 
 exports.default = dev;

@@ -59,8 +59,17 @@ img {
   @include tamanho-tela(tablet) {
     width: 63%;
   }
-
-  @include tamanho-tela(desktop) {}
+  
+  &.dots-color {
+    width: 208px;
+    margin: 1.2em auto 1.5em auto;
+    .point {
+      background-color: $cor-pri;
+      &:nth-child(2n+1) {
+        background-color: $cor-sec;
+      }
+    }
+  }
 
   .point {
     background-color: $branco;
@@ -68,17 +77,14 @@ img {
     width: .8em;
     height: .8em;
 
-
-    @include tamanho-tela(celular) {}
-
-    @include tamanho-tela(tablet) {
-      width: 63%;
-    }
-
-    @include tamanho-tela(desktop) {
+    @include tamanho-tela(celular) {
       width: .5em;
       height: .5em;
     }
+
+    @include tamanho-tela(tablet) {}
+
+    @include tamanho-tela(desktop) {}
   }
 
 }
@@ -94,7 +100,7 @@ hr.divisor {
 
   h1 {
     margin-bottom: 0;
-    font-family: Boomer;
+    font-family: $font-padrao;
     font-style: normal;
     font-weight: 800;
     font-size: 1.5em;
@@ -102,13 +108,8 @@ hr.divisor {
     text-transform: uppercase;
     text-align: left;
 
-    @include tamanho-tela(celular) {}
-
-    @include tamanho-tela(tablet) {}
-
     @include tamanho-tela(desktop) {
-      // font-size: 3.8281em;
-
+      font-size: 1.9em;
     }
 
     &:nth-child(2),
@@ -120,16 +121,12 @@ hr.divisor {
 }
 
 h2.subtitulo-logo {
-  font-family: Boomer;
+  font-family: $font-padrao;
   font-size: 1.2em;
   text-align: left;
 
-  @include tamanho-tela(celular) {}
-
-  @include tamanho-tela(tablet) {}
-
   @include tamanho-tela(desktop) {
-    // font-size: 3.8281em;
+    font-size: 1.4em;
   }
 }
 
@@ -176,5 +173,34 @@ h2.subtitulo-logo {
 
   .chamada-modal {
     cursor: pointer;
+  }
+}
+
+.subtitulo {
+  text-align: center;
+  font-family: $font-padrao;
+  font-size: 1em !important;
+  text-transform: uppercase;
+
+  @include tamanho-tela(celular) {
+    font-size: 1.1em !important;
+  }
+
+  @include tamanho-tela(tablet) {
+    font-size: 1.2em !important;
+  }
+}
+
+.section-1 {
+  padding: 5em 0;
+  background-color: $cor-comp-2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  p {
+    font-size: 1em;
+    text-align: center;
+
+    @include tamanho-tela(tablet) { 
+      text-align: left;
+    }
   }
 }
