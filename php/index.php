@@ -86,7 +86,7 @@
           <img data-aos="fade-left" data-aos-delay="300" src="<?php echo bloginfo('template_directory'); ?>/images/icons-ssi.png" class="mt-3" srcset="<?php echo bloginfo('template_directory'); ?>/images/icons-ssi.png">
 
           <figcaption>
-            <small data-aos="fade-in" data-aos-delay="350" class="text-uppercase">É a fórmula para ter uma campanha de um mandato de resultado.</small>
+            <small data-aos="fade-in" data-aos-delay="350" class="text-uppercase">É a fórmula para ter uma campanha e um mandato de resultado.</small>
           </figcaption>
         </figure>
       </div>
