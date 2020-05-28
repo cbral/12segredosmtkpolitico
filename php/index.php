@@ -21,7 +21,7 @@
                   <div class="logo">
                     <h1 data-aos="fade-right" data-aos-easing="ease" data-aos-delay="400">Os 12 Segredos</h1>
                     <h1 data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800">do Marketing</h1>
-                    <h1 data-aos="fade-right" data-aos-easing="ease" data-aos-delay="1200">Político De resultados</h1>
+                    <h1 data-aos="fade-right" data-aos-easing="ease" data-aos-delay="1200">Político De resultado</h1>
                   </div>
                   <hr class="divisor" data-aos="zoom-in-right" data-aos-delay="1200">
                   <h2 class="subtitulo-logo" data-aos="fade-up" data-aos-delay="1500">Método SSI</h2>
@@ -62,13 +62,13 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="subtitulo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Por que o Método SSI é o melhor para a campanha política?
+        <h2 class="subtitulo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" data-aos-offset="100">Por que o Método SSI é o melhor para a campanha política?
         </h2>
         <div class="box-point dots-color d-flex justify-content-between">
           <?php $logoInter = 1;
           $delay = 200;
           while ($logoInter <= 5) : ?>
-            <div class="point" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="<?php echo $delay ?>"></div>
+            <div class="point" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="100" data-aos-delay="<?php echo $delay ?>"></div>
           <?php $logoInter++;
             $delay = $delay + 200;
           endwhile; ?>
@@ -77,7 +77,7 @@
     </div>
     <div class="row">
       <div class="col-lg-6 pr-lg-4">
-        <p data-aos="fade-in" data-aos-delay="200">O <strong>método SSI</strong> é um tripé político com elementos atuais do marketing. A partir de estudos realizados pelo Instituto Fronteira, se alcançou esse resultado, que reúne análises e processos <strong>eleitorais e políticos</strong> na última década.
+        <p data-aos="fade-in" data-aos-delay="200" data-aos-offset="100">O <strong>método SSI</strong> é um tripé político com elementos atuais do marketing. A partir de estudos realizados pelo Instituto Fronteira, se alcançou esse resultado, que reúne análises e processos <strong>eleitorais e políticos</strong> na última década.
         </p>
         <p data-aos="fade-in" data-aos-delay="200">A sigla SSI significa <strong>Social Media, Strategy e Image</strong>. É a partir deste tripé, de itens interligados entrei si, que mostramos os <strong>12 passos</strong> para seguir em uma campanha eleitoral. </p>
       </div>
@@ -295,19 +295,18 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="box-preco">
-          <p><span class="preco-de">De</span> <span class="preco-cifrao vermelho">R$</span> <span class="preco-antigo">920,99</span> </p>
-          <p class="preco-por">por</p>
-          <p class="m-0" style="line-height: 1.2"><span class="preco-cifrao">R$</span> <span class="preco-atual">449,99</span> </p>
-          <p class="preco-parcelamento">parcele em até 6x</p>
+          <p><span class="preco-de" data-aos="fade-in" data-aos-delay="150" data-aos-easing="ease-in">De</span> <span class="preco-cifrao vermelho" data-aos="fade-in" data-aos-delay="550" data-aos-easing="ease-in">R$</span> <span class="preco-antigo" data-aos="flip-up" data-aos-delay="550" data-aos-easing="ease-in">920,99</span> </p>
+          <p class="preco-por" data-aos="fade-in" data-aos-delay="1000" data-aos-easing="ease-in">por</p>
+          <p class="m-0" style="line-height: 1.2"> <span class="preco-atual"><span class="preco-cifrao posicao" data-aos="fade-in" data-aos-delay="1400" data-aos-easing="ease-in" data-aos-offset="80">R$</span><span data-aos="zoom-in" data-aos-delay="1600" data-aos-easing="ease-in" data-aos-duration="600" data-aos-offset="80">449,99</span> <span class="preco-parcelamento" data-aos="fade-in" data-aos-delay="2500" data-aos-easing="ease-in" data-aos-offset="80">parcele em até 6x</span></span> </p>
         </div>
         <div class="box-preco-descricao">
-          <p>Inclui</p>
-          <p>os 12 segredos do Marketing Político de Resultado</p>
-          <p>+</p>
-          <p>consultoria virtual grátis (com agendamento e perguntas prévias)</p>
-          <p>+</p>
-          <p>dados regionais grátis (dez dias após o inscrito entrar em contato)</p>
-          <a href="" target="_blank" class="btn-default">quero adquirir agora o método</a>
+          <p class="p-descricao-color tit-1">Inclui</p>
+          <p class="p-descricao-color-2">os 12 segredos do Marketing Político de Resultado</p>
+          <p class="p-descricao-color">+</p>
+          <p class="p-descricao-color-2">consultoria virtual grátis (com agendamento e perguntas prévias)</p>
+          <p class="p-descricao-color">+</p>
+          <p class="p-descricao-color-2">dados regionais grátis (dez dias após o inscrito entrar em contato)</p>
+          <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-duration="800" href="" target="_blank" class="btn-default">quero adquirir agora o método</a>
         </div>
       </div>
     </div>

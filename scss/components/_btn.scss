@@ -1,6 +1,7 @@
 .btn-default {
   min-width: 130px;
   width: auto;
+  font-family: $font-padrao;
   display: inline-block;
   justify-content: center;
   font-weight: 600;
@@ -15,6 +16,15 @@
   transition: all .2s ease-in-out;
   text-decoration: none;
   color: $branco;
+
+  &.wpp {
+    margin: 2em auto;
+
+    img {
+      width: 2.3em;
+      height: 2.3em;
+    }
+  }
   
   @include tamanho-tela(celular) {}
   

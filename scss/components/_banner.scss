@@ -2,7 +2,11 @@
   border-bottom: $cor-sec solid;
   outline: $cor-sec solid .9rem;
   background-color: $cor-pri;
-  height: 98vh;
+  height: 80vh;
+  
+  @include tamanho-tela(celular) {
+    height: 98vh;
+  }
 
   @include tamanho-tela(tablet) {
     outline: $cor-sec solid 1.125rem;

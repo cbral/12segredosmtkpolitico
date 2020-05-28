@@ -50,7 +50,7 @@ img {
 
 .box-point {
   width: 76%;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   margin-bottom: .5em;
 
   @include tamanho-tela(celular) {
@@ -381,13 +381,21 @@ h2.subtitulo-logo {
     font-family: $font-padrao;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin: .9em 0;
+
+    @include tamanho-tela(tablet) {
+      font-size: 1.2em;
+    }
   }
 
   p {
-    font-size: .8em;
+    font-size: 1.2em;
     text-align: center;
+
+    @include tamanho-tela(tablet) {
+      font-size: .8em;
+    }
   }
 }
 
@@ -439,6 +447,10 @@ h2.subtitulo-logo {
   padding: 4em 0;
   font-family: $font-padrao;
 
+  span {
+    display: inline-block;
+  }
+
   .titulo-s7 {
     font-family: $font-padrao;
     text-transform: uppercase;
@@ -473,6 +485,10 @@ h2.subtitulo-logo {
         color: $cor-sec-4;
         margin-right: .3em;
       }
+
+      &.posicao {
+        font-size: .35em;
+      }
     }
 
     .preco-antigo {
@@ -481,11 +497,11 @@ h2.subtitulo-logo {
       position: relative;
 
       &::after {
-        bottom: .45em;
+        bottom: .62em;
       }
 
       &::before {
-        top: .45em;
+        top: .62em;
       }
 
       &::before,
@@ -507,14 +523,22 @@ h2.subtitulo-logo {
     }
 
     .preco-atual {
-      font-size: 5.3em;
+      font-size: 4em;
       color: $preto;
+
+      @include tamanho-tela(desktop) {
+        font-size: 5.3em;
+      }
     }
 
     .preco-parcelamento {
       color: $cor-sec-4;
+      font-size: .2em;
+      display: block;
       text-align: right !important;
-      width: 24em;
+      width: 21em;
+      margin: 0 auto;
+      padding-bottom: 1em;
     }
   }
 
@@ -522,6 +546,31 @@ h2.subtitulo-logo {
     max-width: 90%;
     width: 543px;
     margin: 0 auto;
+    padding: 1em 1em 0;
+    text-align: center;
     background-color: $cor-pri;
+    text-transform: uppercase;
+
+    .p-descricao-color {
+      color: $branco;
+
+      &.tit-1 {
+        font-size: 1.4em;
+      }
+    }
+
+    .p-descricao-color-2 {
+      color: $cor-sec;
+      font-size: .8em;
+    }
+  }
+}
+
+// Entre em contato
+.section-8 {
+  padding: 4em 0;
+
+  .contato-e {
+    font-family: $font-padrao;
   }
 }

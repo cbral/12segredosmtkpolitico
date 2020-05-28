@@ -1,13 +1,15 @@
 <!-- Entre em contato -->
-<footer class="section-9">
+<footer class="section-8">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2>Entre em contato</h2>
+        <h2 class="subtitulo" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-offset="-50" data-aos-delay="500">Entre em contato</h2>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <a data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="600" data-aos-offset="50" href="https://wa.me/5542998401688" target="_blank" class="btn-default wpp"><img src="<?php echo bloginfo('template_directory'); ?>/images/contato-wpp.svg" alt="fale com a gente" srcset="<?php echo bloginfo('template_directory'); ?>/images/contato-wpp.svg"> fale com a gente</a>
       </div>
       <div class="col-12">
-        <a href="https://wa.me/+5542998401688" target="_blank" class="btn-default"><img src="<?php echo bloginfo('template_directory'); ?>/images/contato-wpp.svg" alt="fale com a gente" srcset="<?php echo bloginfo('template_directory'); ?>/images/contato-wpp.svg"> fale com a gente</a>
-        <p>E-mail: <a href="mailto:consultoria@institutofronteira.com" target="_blank" rel="noopener noreferrer">consultoria@institutofronteira.com</a></p>
+        <p class="text-center contato-e">E-mail: <a href="mailto:consultoria@institutofronteira.com?subject=Quero%20saber%20mais%20sobre%20o%20método" target="_blank" rel="noopener noreferrer">consultoria@institutofronteira.com</a></p>
       </div>
     </div>
   </div>
