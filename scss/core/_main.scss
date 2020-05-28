@@ -26,6 +26,7 @@ iframe {
 html,
 body {
   font-size: 100%;
+  overflow-x: hidden;
 
   @include tamanho-tela(celular) {
     font-size: 110%;
@@ -49,7 +50,7 @@ img {
 
 .box-point {
   width: 76%;
-  margin-top: 1em;
+  margin-top: 2.5em;
   margin-bottom: .5em;
 
   @include tamanho-tela(celular) {
@@ -59,12 +60,14 @@ img {
   @include tamanho-tela(tablet) {
     width: 63%;
   }
-  
+
   &.dots-color {
     width: 208px;
     margin: 1.2em auto 1.5em auto;
+
     .point {
       background-color: $cor-pri;
+
       &:nth-child(2n+1) {
         background-color: $cor-sec;
       }
@@ -132,8 +135,8 @@ h2.subtitulo-logo {
 
 .proxima-secao {
   margin-top: 50px;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   animation: bounce 2s infinite;
 
   @include tamanho-tela(celular) {}
@@ -191,16 +194,334 @@ h2.subtitulo-logo {
   }
 }
 
+// Por que o Método...
 .section-1 {
   padding: 5em 0;
   background-color: $cor-comp-2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   p {
     font-size: 1em;
     text-align: center;
 
-    @include tamanho-tela(tablet) { 
+    @include tamanho-tela(tablet) {
       text-align: left;
     }
+  }
+
+  small {
+    font-size: 1.2em !important;
+    text-align: center;
+    margin: 1em 0 auto;
+    display: block;
+    line-height: 1.2em;
+
+    @include tamanho-tela(desktop) {
+      font-size: .6em !important;
+    }
+  }
+}
+
+// O Tripé...
+.section-2 {
+  margin: 5em 0;
+
+  .subtitulo {
+    margin: 0 0 2em;
+
+    &.large-fonte {
+      font-size: 1.4em !important;
+
+      @include tamanho-tela(celular) {
+        font-size: 1.5em !important;
+      }
+
+      @include tamanho-tela(tablet) {
+        font-size: 1.6em !important;
+      }
+    }
+  }
+
+  .box-itens-ssi {
+    background: #F4F4F4;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    padding: 1.2em;
+    margin-bottom: 2em;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    h3 {
+      font-family: $font-padrao;
+      font-size: 1.13em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 1.4em;
+    }
+
+    p {
+      font-size: 1em;
+
+      @include tamanho-tela(celular) {
+        font-size: .74em !important;
+      }
+
+      @include tamanho-tela(tablet) {
+        font-size: .82em !important;
+      }
+    }
+  }
+}
+
+// Para quem o método..
+.section-3 {
+  h3 {
+    color: $cor-sec;
+    font-family: $font-padrao;
+    font-size: 1.2em;
+    margin-top: 1.3em;
+
+    @include tamanho-tela(celular) {
+      font-size: 1.3em !important;
+    }
+
+    @include tamanho-tela(tablet) {
+      font-size: 1.4em !important;
+    }
+  }
+
+  .image-ssi-metodo {
+    width: 480px;
+    margin: 2em auto;
+    display: block;
+  }
+}
+
+// Consultoria Grátis
+.section-4 {
+  background-color: $cor-pri;
+  padding: 4em 0;
+  margin-top: 2em;
+
+  h2 {
+    font-family: $font-padrao;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1em;
+    color: $branco;
+    margin-bottom: 1.1em;
+
+    @include tamanho-tela(celular) {
+      font-size: 1.15em !important;
+    }
+
+    @include tamanho-tela(tablet) {
+      font-size: 1.2em !important;
+    }
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  p {
+    color: $branco;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+
+    @include tamanho-tela(celular) {
+      font-size: .8em !important;
+    }
+
+    @include tamanho-tela(tablet) {
+      font-size: .7em !important;
+    }
+  }
+
+  .subtitulo-colors {
+    color: $cor-pri-4;
+  }
+
+  .subtitulo-colors-2 {
+    color: $cor-sec;
+  }
+}
+
+// Quem Ensina o Método
+.section-5 {
+  padding: 5em 0;
+
+  .subtitulo-descricao {
+    font-size: .8em;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .image-autor {
+    border-radius: 50%;
+
+    img {
+      border: .5em solid $cor-pri;
+      border-radius: inherit;
+      width: 270px;
+      height: 270px;
+      margin: 0 auto;
+      padding: 0;
+      display: block;
+      box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .titulo-autor {
+    font-family: $font-padrao;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin: .9em 0;
+  }
+
+  p {
+    font-size: .8em;
+    text-align: center;
+  }
+}
+
+// O melhor investimento
+.section-6 {
+  background: url('../images/bg-melhor-investimento.png');
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4em 0;
+
+  @include tamanho-tela(desktop) {
+    background-attachment: fixed;
+  }
+
+  .titulo-s6 {
+    font-family: $font-padrao;
+    text-transform: uppercase;
+    text-align: center;
+    color: $preto;
+    font-size: 1.4em;
+  }
+
+  .titulo-s6-descricao {
+    color: $cor-sec-4;
+    font-family: $font-padrao;
+    font-size: .9em;
+    text-transform: lowercase;
+    text-align: center;
+  }
+
+  .titulo-s6-descricao-2 {
+    color: $cor-pri;
+    text-align: center;
+    font-family: $font-padrao;
+
+    >p {
+      font-size: 1.4em;
+    }
+  }
+}
+
+// Garanta Já...
+.section-7 {
+  background: url('../images/bg-garanta-curso.jpg');
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4em 0;
+  font-family: $font-padrao;
+
+  .titulo-s7 {
+    font-family: $font-padrao;
+    text-transform: uppercase;
+    text-align: center;
+    color: $preto;
+    font-size: 1.4em;
+  }
+
+  .box-preco {
+    max-width: 600px;
+    width: 100%;
+    background-color: $branco;
+    border-radius: 25px;
+    margin: 1.6em auto 0;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+
+    .preco-de {
+      color: $cor-pri;
+      font-size: 1em;
+      margin-right: .5em;
+    }
+
+    .preco-cifrao {
+      font-size: 1.6em;
+      color: $preto;
+
+      &.vermelho {
+        color: $cor-sec-4;
+        margin-right: .3em;
+      }
+    }
+
+    .preco-antigo {
+      color: $cor-sec-4;
+      font-size: 2.65em;
+      position: relative;
+
+      &::after {
+        bottom: .45em;
+      }
+
+      &::before {
+        top: .45em;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        height: 5px;
+        background-color: $preto;
+        position: absolute;
+        left: -.1em;
+        width: 4em;
+        border-radius: 50px;
+      }
+    }
+
+    .preco-por {
+      text-transform: uppercase;
+      color: $cor-pri;
+      font-size: 1.28em;
+    }
+
+    .preco-atual {
+      font-size: 5.3em;
+      color: $preto;
+    }
+
+    .preco-parcelamento {
+      color: $cor-sec-4;
+      text-align: right !important;
+      width: 24em;
+    }
+  }
+
+  .box-preco-descricao {
+    max-width: 90%;
+    width: 543px;
+    margin: 0 auto;
+    background-color: $cor-pri;
   }
 }

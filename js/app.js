@@ -18,7 +18,9 @@ function onYouTubeIframeAPIReady() {
 
 // Carregamento funções do site
 $(document).ready(function () {
-  AOS.init();
+  AOS.init({
+    offset: 180
+  });
 
   // Add smooth scrolling to all links
   $("[data-scroll='smoth']").on('click', function (event) {
@@ -27,7 +29,7 @@ $(document).ready(function () {
 
       var hash = this.hash;
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 50
+        scrollTop: $(hash).offset().top - 30
       }, 300);
     }
   });
