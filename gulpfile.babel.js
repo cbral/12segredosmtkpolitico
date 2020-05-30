@@ -38,7 +38,7 @@ let paths = {
     dest: `${destino}`,
     jsFiles: [
       `${origemNode}jquery/dist/jquery.js`,
-      `${origemNode}bootstrap/dist/js/bootstrap.js`,
+      `${origemNode}bootstrap/dist/js/bootstrap.bundle.js`,
       `${origem}js/*.js`
     ]
   },

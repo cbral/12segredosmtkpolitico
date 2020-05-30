@@ -41,4 +41,34 @@ $(document).ready(function () {
   $('#modalVideo').on('hidden.bs.modal', function (e) {
     player.stopVideo();
   });
+
+  // Wpp flutuante
+  const icone = document.querySelector(".contato-whatsapp");
+  let intervalSS;
+
+  function setSS() {
+    intervalSS = setInterval(setWpp, 10000);
+  }
+  setSS();
+
+  function setWpp() {
+    icone.classList.toggle("animatedWpp");
+
+    setTimeout(() => {
+      icone.classList.remove("animatedWpp");
+    }, 2500);
+  }
+
+  icone.addEventListener('mouseover', () => {
+    clearInterval(intervalSS);
+    intervalSS = null;
+  });
+
+  icone.addEventListener('mouseout', () => {
+    setSS();
+  });
+  
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 });

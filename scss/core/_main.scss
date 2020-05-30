@@ -569,6 +569,9 @@ h2.subtitulo-logo {
 // Entre em contato
 .section-8 {
   padding: 4em 0;
+  z-index: 9999;
+  position: relative;
+  background-color: $branco;
 
   .contato-e {
     font-family: $font-padrao;

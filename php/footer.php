@@ -24,6 +24,13 @@
   </p>
 </div>
 
+<!-- Wpp flutuante -->
+<div>
+  <a href="<?php echo 'https://wa.me/' . $telefone_Wpp ?>" target="_blank" rel="noopener noreferrer" class="contato-whatsapp" title="Clique aqui para entrar em contato via whatsapp" data-toggle="tooltip" data-offset="10px" data-placement="left">
+    <img src="<?php echo bloginfo('template_directory'); ?>/images/contato-wpp.svg" alt="" aria-label="" />
+  </a>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

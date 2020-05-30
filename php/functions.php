@@ -20,15 +20,8 @@ if (function_exists('acf_add_options_page')) {
   ));
 
   acf_add_options_sub_page(array(
-    'page_title'   => 'Configurações da Seção de vídeo',
-    'menu_title'  => 'Seção Vídeo',
-    'parent_slug'  => 'configuracoes-do-tema',
-    'update_button' => __('Atualizar Site', 'acf'), 'updated_message' => __("Seu site foi atualizado com sucesso, recarregue a página do site para ver as mudanças", 'acf'),
-  ));
-
-  acf_add_options_sub_page(array(
     'page_title'   => 'Configurações de Outras Seções',
-    'menu_title'  => 'Outras Seções',
+    'menu_title'  => 'Seções do Site',
     'parent_slug'  => 'configuracoes-do-tema',
     'update_button' => __('Atualizar Site', 'acf'), 'updated_message' => __("Seu site foi atualizado com sucesso, recarregue a página do site para ver as mudanças", 'acf'),
   ));
