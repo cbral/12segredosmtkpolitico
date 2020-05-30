@@ -43,7 +43,7 @@ let paths = {
     ]
   },
   images: {
-    src: `${origem}images/**/*.{png,jpg,jpeg,gif,svg}`,
+    src: `${origem}images/**/*`,
     srcsprite: origem + "images/sprites/**/*",
     dest: `${destino}`
   },
