@@ -36,7 +36,9 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body d-flex">
-        <iframe id="player-video-explicativo" type="text/html" width="100%" height="auto" src="<?php echo the_field('link_do_video_explicativo', 'option') . '?enablejsapi=1' ?>" frameborder="0"></iframe>
+        <?php $originSite = get_home_url();
+        $linkVideo = get_field('link_do_video_explicativo', 'option') ?>
+        <iframe id="player-video-explicativo" type="text/html" width="100%" height="auto" src="<?php echo $linkVideo . '?origin=' . $originSite . '&enablejsapi=1' ?>" frameborder="0"></iframe>
       </div>
     </div>
   </div>

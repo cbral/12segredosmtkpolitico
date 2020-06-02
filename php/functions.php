@@ -34,7 +34,7 @@ function custom_redirect_level_user($redirect_to, $requested_redirect_to, $user)
       $redirect_to = home_url('/inscrito');
     }
     if (in_array('editor', $user->roles)) {
-      $redirect_to = home_url('/wp-admin/admin.php?page=configuracoes-do-tema');
+      $redirect_to = home_url('/wp-admin/admin.php?page=googlesitekit-splash');
     }
   }
   return  $redirect_to;

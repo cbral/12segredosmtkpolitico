@@ -201,8 +201,17 @@
       </div>
       <!-- item 3 -->
       <div class="col-md-6">
-        <h2 class="subtitulo-colors-2" data-aos="fade-right"><?php the_field('item_3_consultoria_titulo', 'option') ?></h2>
+        <h2 class="subtitulo-colors-2" data-aos="fade-right"><?php the_field('item_4_consultoria_titulo', 'option') ?></h2>
         <div data-aos="fade-in" data-aos-delay="200" data-aos-easing="ease-in-cubic" class="text-center text-md-left">
+          <?php the_field('item_4_consultoria_descricao', 'option') ?>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- item 4 -->
+      <div class="col-md-10">
+        <h2 class="subtitulo-colors-2" data-aos="fade-right"><?php the_field('item_3_consultoria_titulo', 'option') ?></h2>
+        <div data-aos="fade-in" data-aos-delay="200" data-aos-easing="ease-in-cubic" class="text-center">
           <?php the_field('item_3_consultoria_descricao', 'option') ?>
         </div>
       </div>
