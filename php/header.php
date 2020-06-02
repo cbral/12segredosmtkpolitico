@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- favicon init -->
-  <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/apple-icon-57x57.png">
+  <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/apple-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/apple-icon-76x76.png">
@@ -29,7 +29,7 @@
   <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#F2C94C">
   <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#F2C94C">
+  <meta name="theme-color" content="#F2C94C"> -->
   <!-- favicon final -->
 
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/libs.min.css">
