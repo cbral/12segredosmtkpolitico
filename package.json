@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jr01a/12segredosmtkpolitico.git"
+    "url": "https://github.com/girapha/12segredosmtkpolitico.git"
   },
   "keywords": [],
-  "author": "jr01a <jr01a@icloud.com>",
+  "author": "girapha <contato@girapha.com.br>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/Falper/new-projects-front-end#readme",
+  "homepage": "https://github.com/girapha/12segredosmtkpolitico#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
